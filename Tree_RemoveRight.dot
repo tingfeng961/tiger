@@ -1,0 +1,42 @@
+digraph g{
+	size = "10, 10";
+	node [color=lightblue2, style=filled];
+"L_1952:\nx_7639 = c_node->vptr->GetRight(c_node);
+x_7638 = x_7639->vptr->GetKey(x_7639);
+x_7637 = c_node->vptr->SetKey(c_node, x_7638);
+ntb = x_7637;
+p_node = c_node;
+x_7640 = c_node->vptr->GetRight(c_node);
+c_node = x_7640;
+goto L_1954;"->"L_1954:\nx_7636 = c_node->vptr->GetHas_Right(c_node);
+if (x_7636)
+  goto L_1952;
+else
+  goto L_1953;";
+"L_1954:\nx_7636 = c_node->vptr->GetHas_Right(c_node);
+if (x_7636)
+  goto L_1952;
+else
+  goto L_1953;"->"L_1953:\nx_7641 = p_node->vptr->SetRight(p_node, my_null);
+ntb = x_7641;
+x_7642 = p_node->vptr->SetHas_Right(p_node, 0);
+ntb = x_7642;
+return 1;";
+"L_1954:\nx_7636 = c_node->vptr->GetHas_Right(c_node);
+if (x_7636)
+  goto L_1952;
+else
+  goto L_1953;"->"L_1952:\nx_7639 = c_node->vptr->GetRight(c_node);
+x_7638 = x_7639->vptr->GetKey(x_7639);
+x_7637 = c_node->vptr->SetKey(c_node, x_7638);
+ntb = x_7637;
+p_node = c_node;
+x_7640 = c_node->vptr->GetRight(c_node);
+c_node = x_7640;
+goto L_1954;";
+"L_1951:\ngoto L_1954;"->"L_1954:\nx_7636 = c_node->vptr->GetHas_Right(c_node);
+if (x_7636)
+  goto L_1952;
+else
+  goto L_1953;";
+}
